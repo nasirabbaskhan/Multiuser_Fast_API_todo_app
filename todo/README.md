@@ -1,16 +1,20 @@
 # packages
 `poetry add fastapi`
+
 `poetry add uvicorn`
+
 `poetry add sqlmodel`
+
 `poetry add "psycopg[binary]"`
+
 `poetry add psycopg2-binary `
 
-# if show the import problem
+### if show the import problem
 `poetry env info --path `
 
 select the path  and enter in `Python:select interpreter`
 
-# for CRUD operation
+## for CRUD operation
 step 1: Create Database on Neon
 
 step 2: Create .env file for environment variable 
@@ -30,18 +34,20 @@ step 8: Create context manager for app lifespan in main file
 step 9: Create all endpoints of todo app in main file
 
 
-# for Test fast API
+### for Test fast API
 
 `poetry add pytest`
+
 `poetry add httpx`
 
-To run the test
+### To run the test
+
 `poetry run pytest`
-
-
 
 ## for Auth packages
 `add python-multipart`
+
 `poetry add "passlib[bcrypt]"`
-# for jwt token
+
+## for jwt token
 `poetry add "python-jose[cryptography]"`
