@@ -13,15 +13,15 @@
 
 
 ## for CRUD operation
-For CRUD Operations
-Create Database on Neon
-Create .env File for environment variables.
-Create settings.py File for encrypting the Database URL.
-Create a Model in model.py file.
-Create Engine in db.py file.
-Create Function for table creation in db.py file.
-Create Function for session management in db.py file.
-Create Context Manager for app lifespan in the main file.
+
+- * Create Database on Neon
+- * Create .env File for environment variables.
+- * Create settings.py File for encrypting the Database URL.
+- * Create a Model in model.py file.
+- * Create Engine in db.py file.
+- * Create Function for table creation in db.py file.
+- * Create Function for session management in db.py file.
+- * Create Context Manager for app lifespan in the main file.
 
 
 
