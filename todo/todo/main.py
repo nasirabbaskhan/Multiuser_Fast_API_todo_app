@@ -28,6 +28,7 @@ app:FastAPI= FastAPI(lifespan=lifespan, title="Todo app", version ="1.0.0")
 # add the user authentication routs in main file from user.py file
 app.include_router(router=user_router)
 
+
 #9 creating end points
 @app.get("/")
 async def getsomeone():
@@ -78,6 +79,7 @@ async def create_todos(current_user:Annotated[User, Depends(current_user)],
                        todo:Todo_Create, session:Annotated[Session, 
                                                     Depends(get_session)] ):
     new_todo = MultiUserTodo (content=todo.content,user_id=current_user.id)
+    # new_data= MultiUserTodo.model_validate(current_user)
     session.add(new_todo)
     session.commit()
     session.refresh(new_todo)

@@ -59,9 +59,9 @@ def current_user(token:Annotated[str, Depends(outh_sheme)], session:Annotated[Se
     )
     
     try:
-        print("trying g....")
+        
         payload = jwt.decode(token, SECRET, algorithms=[ALGORITHEM])
-        print("gooo")
+     
         username:str | None = payload.get("sub")
         if username is None:
             raise credential_exception
@@ -73,8 +73,11 @@ def current_user(token:Annotated[str, Depends(outh_sheme)], session:Annotated[Se
     if not user:
         raise credential_exception
     return user
+
+
     
-    #refresh access token
+  
+#refresh access token
 def create_refresh_token(data:dict, expiry_time:timedelta| None):
     data_to_encode= data.copy()
     if expiry_time:
@@ -84,6 +87,9 @@ def create_refresh_token(data:dict, expiry_time:timedelta| None):
     data_to_encode.update({"exp": expire})
     encoded_jwt= jwt.encode(data_to_encode, SECRET, algorithm = ALGORITHEM )
     return encoded_jwt
+
+
+
 
 def validate_refresh_token(token:str,
                            session:Annotated[Session, Depends(get_session)]):

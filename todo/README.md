@@ -1,53 +1,27 @@
-# packages
-`poetry add fastapi`
+### Tech Stack
 
-`poetry add uvicorn`
+- **FastAPI**: A high-performance framework for building APIs, enabling rapid development and deployment.
+- **SQLModel**: A library that simplifies database interactions while leveraging Python type hints for better code clarity.
+- **PostgreSQL with Psycopg**: The choice for robust data storage and retrieval, ensuring reliability and performance.
+- **Uvicorn**: An ASGI server that runs my application efficiently and supports high concurrency.
+- **pytest**: A framework for testing, ensuring my application meets high-quality standards.
+- **HTTPX**: Used for making HTTP requests during tests, facilitating easy integration testing with external APIs.
+- **Python-Multipart**: Managed file uploads smoothly within the application.
+- **Passlib**: Utilized for secure password hashing, ensuring user credentials are well protected.
+- **Python-Jose**: Implemented for JSON Web Token (JWT) authentication, providing a secure way to manage user sessions.
 
-`poetry add sqlmodel`
 
-`poetry add "psycopg[binary]"`
-
-`poetry add psycopg2-binary `
-
-### if show the import problem
-`poetry env info --path `
-
-select the path  and enter in `Python:select interpreter`
 
 ## for CRUD operation
-step 1: Create Database on Neon
-
-step 2: Create .env file for environment variable 
-
-step 3: Create setting.py file for encrypting DatabaseURL
-
-step 4: Create a Model in model.py file 
-
-step 5: Create Engine in db.py file
-
-step 6: Create Function for table ceation in db.py file  
-
-step 7: Create Function for session management in db.py file 
- 
-step 8: Create context manager for app lifespan in main file 
-
-step 9: Create all endpoints of todo app in main file
+For CRUD Operations
+Create Database on Neon
+Create .env File for environment variables.
+Create settings.py File for encrypting the Database URL.
+Create a Model in model.py file.
+Create Engine in db.py file.
+Create Function for table creation in db.py file.
+Create Function for session management in db.py file.
+Create Context Manager for app lifespan in the main file.
 
 
-### for Test fast API
 
-`poetry add pytest`
-
-`poetry add httpx`
-
-### To run the test
-
-`poetry run pytest`
-
-## for Auth packages
-`add python-multipart`
-
-`poetry add "passlib[bcrypt]"`
-
-## for jwt token
-`poetry add "python-jose[cryptography]"`
